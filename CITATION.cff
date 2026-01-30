@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: >-
+  If you use this repository's code, please cite it using the metadata below.
+  If you use it to reproduce or build upon results from the paper listed under
+  references, please also cite that paper.
+
+title: "strawberry-runner-repro"
+type: software
+
+authors:
+  - family-names: Ghimire
+    given-names: Bidhan
+
+repository-code: "https://github.com/Bidhan-ghimire/strawberry-runner-repro"
+license: "MIT"
+version: "0.1.0"
+date-released: "2026-01-30"
+
+keywords:
+  - strawberry
+  - runner detection
+  - object detection
+  - deep learning
+  - UAV
+  - aerial imaging
+  - ground imaging
+  - Ultralytics
+  - YOLO
+
+references:
+  - type: article
+    title: "Deep learning for strawberry runner detection integrating ground and aerial imaging"
+    authors:
+      - family-names: Zhou
+        given-names: Xue
+      - family-names: Wang
+        given-names: Xu
+      - family-names: Ji
+        given-names: Liyike
+      - family-names: Daggubati
+        given-names: Santhi
+      - family-names: Shen
+        given-names: Kai
+      - family-names: Whitaker
+        given-names: Vance M.
+    journal: "Smart Agricultural Technology"
+    volume: 12
+    month: 12
+    year: 2025
+    publisher: "Elsevier"
+    doi: "10.1016/j.atech.2025.101290"
+    url: "https://doi.org/10.1016/j.atech.2025.101290"
