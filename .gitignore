@@ -1,0 +1,12 @@
+# Data
+data/external/
+data/datasets/
+
+# Training outputs 
+runs/
+
+# Common junk
+__pycache__/
+*.pyc
+.DS_Store
+EOF
