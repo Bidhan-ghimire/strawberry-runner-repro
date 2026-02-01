@@ -3,9 +3,9 @@ import pandas as pd
 
 RUN_DIRS = {
     "YOLOv8x-seg": {
-        "GI":  "runs/segment/yolov8x_GI",
-        "AI5": "runs/segment/yolov8x_AI5",
-        "AI10":"runs/segment/yolov8x_AI10",
+        "GI":  "runs/segment/yolovx_GI",
+        "AI5": "runs/segment/yolovx_AI5",
+        "AI10":"runs/segment/yolovx_AI10",
     },
     "YOLOv11x-seg": {
         "GI":  "runs/segment/yolo11x_GI",
