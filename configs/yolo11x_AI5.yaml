@@ -1,0 +1,19 @@
+task: segment
+mode: train
+model: yolo11x-seg.pt
+data: data/fixed_yamls/AI5.yaml
+imgsz: 320
+batch: 32
+optimizer: auto
+lr0: 0.01
+lrf: 0.01
+cos_lr: false
+weight_decay: 0.0005
+warmup_epochs: 3
+epochs: 1000
+patience: 20
+seed: 0
+deterministic: true
+name: yolo11x_AI5
+
+#Note: optimizer=auto can auto-select optimizer settings and may override some hyperparameters. We used lr0=0.01 as the paper stated, but optimizer=auto overrides it. Fortunately, it still selected lr=0.0
