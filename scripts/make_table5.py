@@ -14,10 +14,10 @@ IMG_EXTS = (".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff", ".webp")
 
 experiments = [
     # model_family, trained_on, weights_path, val_images_folder
-    ("YOLOv8x-seg",  "GI",          "runs/segment/yolov8x_GI/weights/best.pt",          "data/datasets/GI/val/images"),
-    ("YOLOv8x-seg",  "AI5",         "runs/segment/yolov8x_AI5/weights/best.pt",         "data/datasets/AI5/val/images"),
-    ("YOLOv8x-seg",  "AI10",        "runs/segment/yolov8x_AI10/weights/best.pt",        "data/datasets/AI10/val/images"),
-    ("YOLOv8x-seg",  "GI+AI5+AI10", "runs/segment/yolov8x_GI_AI5_AI10/weights/best.pt", "data/datasets/GI_AI5_AI10/val/images"),
+    ("YOLOv8x-seg",  "GI",          "runs/segment/yolo8x_GI/weights/best.pt",          "data/datasets/GI/val/images"),
+    ("YOLOv8x-seg",  "AI5",         "runs/segment/yolo8x_AI5/weights/best.pt",         "data/datasets/AI5/val/images"),
+    ("YOLOv8x-seg",  "AI10",        "runs/segment/yolo8x_AI10/weights/best.pt",        "data/datasets/AI10/val/images"),
+    ("YOLOv8x-seg",  "GI+AI5+AI10", "runs/segment/yolo8x_GI_AI5_AI10/weights/best.pt", "data/datasets/GI_AI5_AI10/val/images"),
 
     ("YOLOv11x-seg", "GI",          "runs/segment/yolo11x_GI/weights/best.pt",          "data/datasets/GI/val/images"),
     ("YOLOv11x-seg", "AI5",         "runs/segment/yolo11x_AI5/weights/best.pt",         "data/datasets/AI5/val/images"),
