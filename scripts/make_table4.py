@@ -6,11 +6,13 @@ RUN_DIRS = {
         "GI":  "runs/segment/yolo8x_GI",
         "AI5": "runs/segment/yolo8x_AI5",
         "AI10":"runs/segment/yolo8x_AI10",
+        "GI_AI5_AI10":"runs/segment/yolo8x_GI_AI5_AI10",
     },
     "YOLOv11x-seg": {
         "GI":  "runs/segment/yolo11x_GI",
         "AI5": "runs/segment/yolo11x_AI5",
         "AI10":"runs/segment/yolo11x_AI10",
+        "GI_AI5_AI10":"runs/segment/yolo11x_GI_AI5_AI10",
     },
 }
 
@@ -22,7 +24,7 @@ def best_row(csv_path):
     df["fitness"] = df["metrics/mAP50-95(B)"] + df["metrics/mAP50-95(M)"]
     return df.loc[df["fitness"].idxmax()]
 
-datasets = ["GI", "AI5", "AI10"]
+datasets = ["GI", "AI5", "AI10","GI_AI5_AI10"]
 rows = []
 
 for model_family in ["YOLOv8x-seg", "YOLOv11x-seg"]:
