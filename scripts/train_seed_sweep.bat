@@ -1,7 +1,7 @@
 @echo off
 setlocal EnableExtensions EnableDelayedExpansion
 
-set SEEDS=7 17 37
+set SEEDS=7 17 37 42
 
 REM Models
 set MODELS=yolov8x-seg.pt yolo11x-seg.pt
@@ -35,7 +35,6 @@ for %%S in (%SEEDS%) do (
         batch=%BATCH% ^
         optimizer=auto ^
         lr0=%LR0% ^
-        lrf=%LRF% ^
         cos_lr=False ^
         weight_decay=%WD% ^
         warmup_epochs=%WARMUP% ^
