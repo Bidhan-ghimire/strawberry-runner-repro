@@ -3,11 +3,13 @@ import pandas as pd
 runs = {
     "yolov8x_GI":  r"runs\segment\yolo8x_GI\results.csv",
     "yolov8x_AI5": r"runs\segment\yolo8x_AI5\results.csv",
-    "yolov8x_AI10":r"runs\segment\yolovx_AI10\results.csv",
+    "yolov8x_AI10":r"runs\segment\yolo8x_AI10\results.csv",
+    "yolov8x_GI_AI5_AI10":r"runs\segment\yolo8x_GI_AI5_AI10\results.csv",
 
     "yolo11x_GI":  r"runs\segment\yolo11x_GI\results.csv",
     "yolo11x_AI5": r"runs\segment\yolo11x_AI5\results.csv",
     "yolo11x_AI10":r"runs\segment\yolo11x_AI10\results.csv",
+    "yolov11x_GI_AI5_AI10":r"runs\segment\yolo11x_GI_AI5_AI10\results.csv",
 }
 
 for name, csv in runs.items():
