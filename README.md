@@ -18,6 +18,29 @@ Important note about metrics
   - Box metrics (B): detection-style metrics on predicted bounding boxes
   - Mask metrics (M): segmentation metrics on predicted instance masks
 
+
+ Extension: SAM-assisted pseudo-labeling (Option B, no official-val leakage)
+
+In addition to reproducing the paper tables, I implemented a SAM-assisted pseudo-labeling workflow to explore the paper’s suggested future direction of using foundation segmentation models to expand training masks with less manual labeling.
+
+Definitions:
+- L = labeled subset of the original training split (example: 20%).
+- U = unlabeled subset of the original training split (remaining 80%).
+- Official validation split is used only for final student evaluation, not for teacher training or pseudo-label creation (Option B).
+
+Runs (seed = 42):
+- Run 1 (L-only baseline): Train YOLO segmentation using only L, evaluate on the official validation split.
+- Run 2 (fair pseudo-labeling): Train a teacher detector only on L (with an internal teacher-val split taken from L), generate boxes on U, use SAM (sam2_t) to convert boxes→masks, then train a student segmentation model on L + pseudo(U).
+- Run 3 (oracle teacher upper bound, diagnostic): Train a stronger teacher detector using full training labels (internal train/val split taken from the training split), then pseudo-label U and train the same student pipeline. This is NOT a label-efficiency setting; it is used to estimate an upper bound and diagnose whether box quality is the main bottleneck.
+
+Key findings (L=20%, seed=42):
+- Run 2 performed worse than the L-only baseline, indicating that naive SAM pseudo-labeling can introduce label noise when the teacher detector is trained on a small labeled subset.
+- Run 3 improved substantially over Run 2, suggesting the bottleneck is largely teacher box quality; however, mask mAP50-95 did not improve versus the L-only baseline, indicating pseudo-mask boundary quality remains a limitation.
+
+All run summaries are extracted from each run’s results.csv:
+- results/tables/sam_runs_run1_run2_run3_summary.csv
+
+
 ## Repository layout
 
 - configs/
@@ -130,4 +153,5 @@ Documentation:
 ## AI assistance
 
 This repository was created with assistance from an AI tool (ChatGPT) for drafting code and proofreading documentation. All outputs were reviewed and edited by the author.
+
 
