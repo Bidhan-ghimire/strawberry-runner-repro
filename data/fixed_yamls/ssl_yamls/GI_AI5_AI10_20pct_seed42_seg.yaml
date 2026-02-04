@@ -1,5 +1,0 @@
-path: data/ssl/GI_AI5_AI10_20pct_seed42
-train: labeled/train/images
-val: val/images
-names:
-  0: runner
