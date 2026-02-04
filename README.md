@@ -17,7 +17,7 @@ This repository reproduces key results from a strawberry runner detection and se
 
 ---
 
-## Extension: SAM-assisted pseudo-labeling (Option B)
+## Extension: SAM-assisted pseudo-labeling 
 
 I implemented a SAM-assisted pseudo-labeling workflow to test whether segmentation can be improved with less manual labeling.
 
@@ -69,3 +69,4 @@ Create an environment and install dependencies:
 ```bash
 pip install -U pip
 pip install ultralytics pandas numpy pyyaml
+
