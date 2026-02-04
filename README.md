@@ -68,5 +68,9 @@ Create an environment and install dependencies:
 
 ```bash
 pip install -U pip
-pip install ultralytics pandas numpy pyyaml
+pip install ultralytics pandas numpy pyyaml```
+
+## AI assistance
+This repository was created with assistance from an AI tool (ChatGPT) for drafting code and proofreading documentation. All outputs were reviewed and edited by the author.
+
 
