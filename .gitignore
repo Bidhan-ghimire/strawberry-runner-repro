@@ -1,6 +1,5 @@
 # Data
-data/external/
-data/datasets/
+data/
 
 # Training outputs 
 runs/
@@ -13,3 +12,6 @@ __pycache__/
 *.pyc
 .DS_Store
 EOF
+
+
+
