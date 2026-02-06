@@ -38,7 +38,7 @@ I implemented a SAM-assisted pseudo-labeling workflow to test whether segmentati
 - Run 2 performed worse than Run 1, suggesting pseudo-label noise can hurt when the detector is trained on a small labeled subset.
 - Run 3 improved over Run 2, suggesting detector box quality is a major bottleneck; however, mask boundary quality remains a limitation.
 
-Run summaries (extracted from `results.csv` only):
+Run summaries :
 - `results/tables/sam_runs_run1_run2_run3_summary.csv`
 
 ---
@@ -73,6 +73,7 @@ pip install ultralytics pandas numpy pyyaml
 
 ## AI assistance
 This repository was created with assistance from an AI tool (ChatGPT) for drafting code and proofreading documentation. All outputs were reviewed and edited by the author.
+
 
 
 
